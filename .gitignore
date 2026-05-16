@@ -6,3 +6,4 @@ CONTENT_TEMPLATE.md
 TASKS.md
 .DS_Store
 node_modules/
+dist/
