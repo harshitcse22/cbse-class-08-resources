@@ -3,13 +3,13 @@ import { ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const classes = [
-  { label: 'Class 6',  href: '#' },
-  { label: 'Class 7',  href: '#' },
-  { label: 'Class 8',  href: '#' },
-  { label: 'Class 9',  href: '#' },
-  { label: 'Class 10', href: '#' },
-  { label: 'Class 11', href: '#' },
-  { label: 'Class 12', href: '#' },
+  { label: 'Class 6',  href: 'https://edzy-ai.github.io/cbse-class-06-resources/' },
+  { label: 'Class 7',  href: 'https://edzy-ai.github.io/cbse-class-07-resources/' },
+  { label: 'Class 8',  href: 'https://edzy-ai.github.io/cbse-class-08-resources/' },
+  { label: 'Class 9',  href: 'https://edzy-ai.github.io/cbse-class-09-resources/' },
+  { label: 'Class 10', href: 'https://edzy-ai.github.io/cbse-class-10-resources/' },
+  { label: 'Class 11', href: 'https://edzy-ai.github.io/cbse-class-11-resources/' },
+  { label: 'Class 12', href: 'https://edzy-ai.github.io/cbse-class-12-resources/' },
 ]
 
 export default function Navbar() {
@@ -43,6 +43,8 @@ export default function Navbar() {
                 <a
                   key={c.label}
                   href={c.href}
+                  target={c.href === '#' ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
                   className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 no-underline"
                 >
                   {c.label}
