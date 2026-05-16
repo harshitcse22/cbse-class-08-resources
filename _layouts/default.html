@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --link: #2563eb;
+      --link-hover: #1d4ed8;
+      --accent: #eff6ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .site-header {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .site-header-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+
+    .site-kicker {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--link);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 40px;
+      line-height: 1.15;
+    }
+
+    .site-subtitle {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 720px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    p, ul, ol {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      margin: 24px 0;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    .breadcrumbs {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .breadcrumbs a {
+      color: var(--muted);
+    }
+
+    .nav-box {
+      background: var(--accent);
+      border: 1px solid #bfdbfe;
+      padding: 18px 20px;
+      border-radius: 14px;
+      margin: 28px 0;
+    }
+
+    .meta-list {
+      margin: 16px 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta-list li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0 28px;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .mini-card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .mini-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    code {
+      background: #eef2ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-kicker">CBSE Resources</div>
+      <h1 class="site-title">{{ site.title }}</h1>
+      <p class="site-subtitle">{{ site.description }}</p>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+    <p class="footer-note">Built for students. Structured by subject, book, and chapter.</p>
+  </main>
+</body>
+</html>

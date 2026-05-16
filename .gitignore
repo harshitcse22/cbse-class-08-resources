@@ -1,0 +1,8 @@
+.internal/
+AGENTS.md
+SKILLS.md
+DATA_SOURCES.md
+CONTENT_TEMPLATE.md
+TASKS.md
+.DS_Store
+node_modules/
